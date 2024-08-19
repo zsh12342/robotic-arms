@@ -1,0 +1,8 @@
+prefix=/home/kuavo/task_ros/devel
+
+Name: task5
+Description: Description of task5
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

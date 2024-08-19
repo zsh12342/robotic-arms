@@ -1,0 +1,83 @@
+
+import rospy
+from std_msgs.msg import String, Float32MultiArray
+from dynamic_biped.msg import walkCommand
+
+class KuavoController:
+    def __init__(self):
+        rospy.init_node('kuavo_depth_based_movement')
+        
+        # 发布者
+        self.walk_pub = rospy.Publisher('/walkCommand', walkCommand, queue_size=10)
+        
+        # 订阅者
+        bottle_topic = rospy.get_param('~bottle_topic', '/bottle_detection_node_24168_1721823430807')
+        rospy.Subscriber('/bottle_detection_node_24168_1721823430807', String, self.bottle_callback)
+        rospy.Subscriber('/humanoid_controller/com/r', Float32MultiArray, self.com_position_callback)
+        
+        self.current_depth = None
+        self.target_distance = 0.5  # 目标停止距离（米）
+        self.walk_speed = 0.2  # 行走速度（米/秒）
+        self.com_position = None
+        self.data_received_count = 0
+        self.last_data_time = rospy.Time.now()
+        
+    def bottle_callback(self, msg):
+        self.data_received_count += 1
+        current_time = rospy.Time.now()
+        time_since_last = (current_time - self.last_data_time).to_sec()
+        self.last_data_time = current_time
+        
+        rospy.loginfo(f"Received data from bottle detection: {msg.data}")
+        rospy.loginfo(f"Data received count: {self.data_received_count}, Time since last data: {time_since_last:.2f}s")
+        
+        try:
+            # 假设消息格式为 "class,x,y,depth"
+            _, _, _, depth = msg.data.split(',')
+            self.current_depth = float(depth)
+            rospy.loginfo(f"Parsed depth: {self.current_depth:.2f}m")
+            self.adjust_movement()
+        except ValueError as e:
+            rospy.logerr(f"Error parsing bottle detection data: {e}")
+        
+    def com_position_callback(self, msg):
+        self.com_position = msg.data
+        
+    def adjust_movement(self):
+        if self.current_depth is None:
+            return
+        
+        walk_cmd = walkCommand()
+        walk_cmd.mode = 1  # 速度控制模式
+        
+        if self.current_depth > self.target_distance:
+            # 如果距离大于0.5米，向前移动
+            walk_cmd.values = [self.walk_speed, 0.0, 0.0]  # [x速度, y速度, 旋转速度]
+            rospy.loginfo(f"Moving forward, current depth: {self.current_depth:.2f}m")
+        else:
+            # 如果距离小于等于0.5米，停止
+            walk_cmd.values = [0.0, 0.0, 0.0]
+            rospy.loginfo(f"Stopping, target reached. Current depth: {self.current_depth:.2f}m")
+        
+        self.walk_pub.publish(walk_cmd)
+        
+    def run(self):
+        rospy.loginfo("开始基于深度的移动任务")
+        rate = rospy.Rate(1)  # 1Hz for status updates
+        while not rospy.is_shutdown():
+            current_time = rospy.Time.now()
+            time_since_last_data = (current_time - self.last_data_time).to_sec()
+            if time_since_last_data > 5.0:  # 5 seconds timeout
+                rospy.logwarn(f"No data received for {time_since_last_data:.2f} seconds!")
+            
+            rospy.loginfo(f"Status: Data received count: {self.data_received_count}, Last depth: {self.current_depth}")
+            if self.com_position:
+                rospy.loginfo(f"Current COM position: {self.com_position}")
+            rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        controller = KuavoController()
+        controller.run()
+    except rospy.ROSInterruptException:
+        rospy.loginfo("Program interrupted by user")

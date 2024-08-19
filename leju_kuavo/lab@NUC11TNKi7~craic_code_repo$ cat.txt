@@ -1,0 +1,54 @@
+CURRENT_SOURCE_DIR: "/home/lab/kuavo_ros_ws/src/kuavo_opensource"
+CONFIG_PATH: src/biped_v2/config/kuavo_v4.0/kuavo.json
+ROBOT_VERSION is: 4
+NUM_JOINT: 26
+logger start at /tmp/lcm_log.bin
+na_no_arm:12 nq_no_arm:19 nv_no_arm:18
+na_with_arm:26 nq_with_arm:45 nv_with_arm:44
+dt_ = 0.00100
+whole body total_mass: 48.82000
+foot width: 0.22490
+total_mass_:48.82000
+total_mass_with_arm:48.82000
+Number of FSMState: 6
+Fail to libusb_claim_interface
+fail to re-submit transfer
+ruiwo_actuator init success!!
+[DexterousHand] init port -3:/dev/stark_serial_L
+[DexterousHand] intit Open COM port:-3
+[DexterousHand] init port -3:/dev/stark_serial_R
+[DexterousHand] intit Open COM port:-3
+[DexterousHand] initf ok, inished 
+[HardwarePlant] initEndEffector Qiangnao DexterousHand init success!! 
+Info: actuatorsInterfaceSetup success!
+actuatorsInterfaceSetup DONE !
+Ec_Master config_path: /home/lab/kuavo_ros_ws/src/kuavo_opensource/lib/EC_Master/config/elmo_14_c500.xml
+EC_master License: File /home/lab/.config/lejuconfig/ec_master.key does not exist.
+0000000000: EcMasterDemoDc V3.1.4.07 (Protected) for Linux_x64 Copyright acontis technologies GmbH @ 2022
+0000000000: Full command line: -i8254x 1 1 -a 7 -f "/home/lab/kuavo_ros_ws/src/kuavo_opensource/lib/EC_Master/config/elmo_14_c500.xml"-auxclk 500 -dcmmode busshift -t 0 -perf -sp -v 2 
+0000000001: Enter my app Init
+0000000001: Start Remote API Server now
+ioctl ATEMSYS_IOCTL_PCI_CONF_DEVICE failed: Device or resource busy
+0000000002: EC-Master V3.1.4.07 (Protected) for Linux_x64 Copyright acontis technologies GmbH @ 2022
+0000000002: emllI8254x(0x00000001): V3.1.4.07 (Unrestricted) for Linux_x64 Copyright acontis technologies GmbH @ 2022
+0000000002: Device 0000:72:00.0 can't be accessed!
+0000000002: Check if this device is in use by another driver!
+0000000002: emllI8254x(0x00000001): LinkOsGetPciInfo returns ERROR: Not found
+0000000002: CEcDeviceBase::Open() Failed to open link layer!
+0000000002: ecatInitMaster(): Error opening EtherCAT device!
+0000000202: Cannot initialize EtherCAT-Master: ERROR: Not found (0x9811000c))
+0000000202: Stop Remote Api Server
+0000001001: ERROR: Cannot de-initialize EtherCAT-Master: ERROR: Invalid state (0x9811000e)
+0000006002: EcMasterDemoDc stop.
+Ecmaster exited
+Signal requested ...
+lcm logger stopping...
+lcm bin logger stopping...
+last Binary log file is: /tmp/lcm_log.bin_part0
+merging log file part: /tmp/lcm_log.bin_part0
+Binary log file saved to /tmp/lcm_log.bin
+lcm 输出日志保存到: /var/lcm_log/2024-07-20_12-55-30_0.0.2-112-g934ff61.bin
+Use 'sudo ./src/biped_v2/bin2csv'to convert binary log file to csv format if needed.
+lcm logger stopped
+Before Finish stdout redirection.
+终端输出日志保存到: /home/lab/.log/log_20240720_125530_0.0.2-112-g934ff61.txt

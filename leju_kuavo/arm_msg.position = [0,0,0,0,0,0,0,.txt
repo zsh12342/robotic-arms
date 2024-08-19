@@ -1,0 +1,23 @@
+ arm_msg.position = [0,0,0,0,0,0,0,0,-100,0,0,0,0,0] #9号机移动侧平举
+        self.arm_pub.publish(arm_msg)
+        rospy.sleep(2)
+        
+        # 按下按钮
+        arm_msg.position = [-0,0,0,0,0,0,-0,0,-100,0,-89,0,0,0]#11号机移动成飞鸟
+        self.arm_pub.publish(arm_msg)
+        rospy.sleep(1)
+        
+        # 手臂归中
+        arm_msg.position = [-0,0,0,0,0,0,-0,0,-100,-30,-89,0,0,0]#手拍
+        self.arm_pub.publish(arm_msg)
+        rospy.sleep(2)
+
+
+        arm_msg.position = [-0,0,0,0,0,0,-0,0,-100,0,-89,0,0,0]#收回来
+        self.arm_pub.publish(arm_msg)
+        rospy.sleep(2)
+
+
+        arm_msg.position = [-0,0,0,0,0,0,-0,0,-100,0,0,0,0,0]#侧平举
+        self.arm_pub.publish(arm_msg)
+        rospy.sleep(2)
