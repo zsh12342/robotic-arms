@@ -1,0 +1,11 @@
+# controlJodellClaw.srv
+# 
+# service name : control_jodell_claw_position
+# 
+# limit : [0, 255]
+
+# Request definition
+uint8 left_claw_position
+uint8 right_claw_position
+---
+bool   result

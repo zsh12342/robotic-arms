@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="HHH_Kuavo_V2_New">
+  <link
+    name="torso">
+    <inertial>
+      <origin
+        xyz="-0.00670638026521009 2.95030529784676E-06 0.165275498634418"
+        rpy="0 0 0" />
+      <mass
+        value="5.87186508518753" />
+      <inertia
+        ixx="0.0116768769746324"
+        ixy="-2.46899001189923E-06"
+        ixz="9.12974175703485E-05"
+        iyy="0.00792972010809832"
+        iyz="7.18933213631156E-08"
+        izz="0.00881069629650172" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/torso.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/torso.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_leg_roll">
+    <inertial>
+      <origin
+        xyz="0.0631503713302497 1.13113015259847E-07 -0.00363377288833538"
+        rpy="0 0 0" />
+      <mass
+        value="0.155290443540035" />
+      <inertia
+        ixx="0.000115773865336976"
+        ixy="-1.23169169595489E-09"
+        ixz="-7.18956256312938E-06"
+        iyy="0.000264660676624979"
+        iyz="-5.67618841796029E-11"
+        izz="0.000347117669713492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_leg_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_leg_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_leg_roll"
+    type="continuous">
+    <origin
+      xyz="-0.0615 0.087 -0.066"
+      rpy="0 0 0" />
+    <parent
+      link="torso" />
+    <child
+      link="l_leg_roll" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="l_leg_yaw">
+    <inertial>
+      <origin
+        xyz="-3.63764801976302E-05 0.0402912811842449 -0.117136211721692"
+        rpy="0 0 0" />
+      <mass
+        value="0.253850801572731" />
+      <inertia
+        ixx="0.00032266948872943"
+        ixy="1.36646610537855E-07"
+        ixz="-3.13073031218342E-07"
+        iyy="0.000416850635991525"
+        iyz="1.61404363376614E-06"
+        izz="0.000275402909549188" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_leg_yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_leg_yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_leg_yaw"
+    type="continuous">
+    <origin
+      xyz="0.0725 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="l_leg_roll" />
+    <child
+      link="l_leg_yaw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_leg_pitch">
+    <inertial>
+      <origin
+        xyz="-0.00992364238039314 -0.0862164098319612 -0.0480032208797727"
+        rpy="0 0 0" />
+      <mass
+        value="0.364161551170073" />
+      <inertia
+        ixx="0.00224509040946959"
+        ixy="-2.61147466628776E-05"
+        ixz="0.000151116044898184"
+        iyy="0.00255033828205382"
+        iyz="8.48162356892457E-05"
+        izz="0.000410216495984123" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_leg_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_leg_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_leg_pitch"
+    type="continuous">
+    <origin
+      xyz="0 0.092 -0.1451"
+      rpy="0 0 0" />
+    <parent
+      link="l_leg_yaw" />
+    <child
+      link="l_leg_pitch" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_knee">
+    <inertial>
+      <origin
+        xyz="0.000219392167155693 0.0218549017813342 -0.0569583461310369"
+        rpy="0 0 0" />
+      <mass
+        value="2.29231311065421" />
+      <inertia
+        ixx="0.00718117511900581"
+        ixy="-1.89213933480346E-06"
+        ixz="-3.90978080169709E-05"
+        iyy="0.00808143321456881"
+        iyz="0.000298758430053684"
+        izz="0.00164447990825871" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_knee_pitch"
+    type="continuous">
+    <origin
+      xyz="-4.3384E-05 -0.0964 -0.25"
+      rpy="0 0 0" />
+    <parent
+      link="l_leg_pitch" />
+    <child
+      link="l_knee" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_foot_pitch">
+    <inertial>
+      <origin
+        xyz="-2.20949154950377E-07 -0.0190002209491548 -2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00898868764931505" />
+      <inertia
+        ixx="8.64757693496476E-07"
+        ixy="4.3881582906262E-16"
+        ixz="3.49395618806148E-11"
+        iyy="8.64757693496478E-07"
+        iyz="-3.54041160035084E-11"
+        izz="1.52124214524266E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_foot_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_foot_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_foot_pitch"
+    type="continuous">
+    <origin
+      xyz="4.3384E-05 0.04675 -0.353"
+      rpy="0 0 0" />
+    <parent
+      link="l_knee" />
+    <child
+      link="l_foot_pitch" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_foot_roll">
+    <inertial>
+      <origin
+        xyz="-0.0276549821919966 -9.29863780751994E-07 -0.0342264985535305"
+        rpy="0 0 0" />
+      <mass
+        value="0.12334111509867" />
+      <inertia
+        ixx="6.0553166588824E-05"
+        ixy="7.10223108196489E-09"
+        ixz="1.16041293280919E-06"
+        iyy="0.000171194585144969"
+        iyz="3.36817831490299E-10"
+        izz="0.000218939215150217" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_foot_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_foot_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_foot_roll"
+    type="continuous">
+    <origin
+      xyz="0.019 -0.019 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_foot_pitch" />
+    <child
+      link="l_foot_roll" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="l_l_bar_y">
+    <inertial>
+      <origin
+        xyz="-0.01287620008156 0.0130442652495336 2.26097650974921E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.012759619169383" />
+      <inertia
+        ixx="2.15949216031944E-06"
+        ixy="4.43842186576816E-07"
+        ixz="8.0878453299457E-09"
+        iyy="7.62569773873674E-06"
+        iyz="-7.7935718024464E-10"
+        izz="6.76548220940888E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_l_bar_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_l_bar_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_l_bar_y"
+    type="continuous">
+    <origin
+      xyz="4.3384E-05 0.0536 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_knee" />
+    <child
+      link="l_l_bar_y" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_l_tendon_y">
+    <inertial>
+      <origin
+        xyz="-9.50863917436456E-05 -0.00348718924375568 -0.189332846382417"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364165473563779" />
+      <inertia
+        ixx="0.000353185722752295"
+        ixy="5.6363401327453E-14"
+        ixz="4.53695345026895E-14"
+        iyy="0.000352607650188542"
+        iyz="-7.98861226471155E-08"
+        izz="1.28440633963247E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_l_tendon_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.913725490196078 0.925490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_l_tendon_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_l_tendon_y"
+    type="continuous">
+    <origin
+      xyz="-0.056 0.01765 9.8332E-05"
+      rpy="0 0 0" />
+    <parent
+      link="l_l_bar_y" />
+    <child
+      link="l_l_tendon_y" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_r_bar_y">
+    <inertial>
+      <origin
+        xyz="-0.0129295002430429 -0.0128630853634777 -1.75375824973401E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0127817048314976" />
+      <inertia
+        ixx="2.15923909903579E-06"
+        ixy="-3.50819163706581E-07"
+        ixz="-9.11014926591118E-14"
+        iyy="7.64825682661439E-06"
+        iyz="1.03529361064663E-14"
+        izz="6.78488308079221E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_r_bar_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_r_bar_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_r_bar_y"
+    type="continuous">
+    <origin
+      xyz="4.3384E-05 0.0005 -0.113"
+      rpy="0 0 0" />
+    <parent
+      link="l_knee" />
+    <child
+      link="l_r_bar_y" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_r_tendon_y">
+    <inertial>
+      <origin
+        xyz="-9.5000081138677E-05 0.00348245176190838 -0.130862804524797"
+        rpy="0 0 0" />
+      <mass
+        value="0.0265855468930854" />
+      <inertia
+        ixx="0.000111943505856657"
+        ixy="3.37259311216766E-14"
+        ixz="4.53671736630511E-14"
+        iyy="0.000111576407165588"
+        iyz="5.33518725056922E-08"
+        izz="9.55855949946402E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_r_tendon_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.913725490196078 0.925490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_r_tendon_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_r_tendon_y"
+    type="continuous">
+    <origin
+      xyz="-0.056 -0.01625 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_r_bar_y" />
+    <child
+      link="l_r_tendon_y" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_leg_roll">
+    <inertial>
+      <origin
+        xyz="0.0631503701094682 1.14062238057433E-07 -0.0036337726639632"
+        rpy="0 0 0" />
+      <mass
+        value="0.155290438056609" />
+      <inertia
+        ixx="0.000115773861975733"
+        ixy="-1.23954965019941E-09"
+        ixz="-7.18956673323886E-06"
+        iyy="0.000264660661625864"
+        iyz="-5.44233142895205E-11"
+        izz="0.000347117653776115" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_leg_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_leg_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_leg_roll"
+    type="continuous">
+    <origin
+      xyz="-0.0615 -0.087 -0.066"
+      rpy="0 0 0" />
+    <parent
+      link="torso" />
+    <child
+      link="r_leg_roll" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r_leg_yaw">
+    <inertial>
+      <origin
+        xyz="3.63764240454119E-05 -0.0402912809703269 -0.117136211644412"
+        rpy="0 0 0" />
+      <mass
+        value="0.253850802112113" />
+      <inertia
+        ixx="0.000322669489787856"
+        ixy="1.36646926174826E-07"
+        ixz="3.13072738155695E-07"
+        iyy="0.000416850636341302"
+        iyz="-1.6140427976929E-06"
+        izz="0.000275402910495988" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_leg_yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_leg_yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_leg_yaw"
+    type="continuous">
+    <origin
+      xyz="0.0725 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="r_leg_roll" />
+    <child
+      link="r_leg_yaw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r_leg_pitch">
+    <inertial>
+      <origin
+        xyz="-0.00992364017937534 0.0862164219978786 -0.0480032241192982"
+        rpy="0 0 0" />
+      <mass
+        value="0.364161580520867" />
+      <inertia
+        ixx="0.00224509028978684"
+        ixy="2.61147683575742E-05"
+        ixz="0.000151116120178178"
+        iyy="0.00255033828756944"
+        iyz="-8.48166278372895E-05"
+        izz="0.000410216390550043" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_leg_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_leg_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_leg_pitch"
+    type="continuous">
+    <origin
+      xyz="0 -0.092 -0.1451"
+      rpy="0 0 0" />
+    <parent
+      link="r_leg_yaw" />
+    <child
+      link="r_leg_pitch" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_knee">
+    <inertial>
+      <origin
+        xyz="0.000219392219773565 -0.0218549030192474 -0.0569583438914432"
+        rpy="0 0 0" />
+      <mass
+        value="2.29231319800594" />
+      <inertia
+        ixx="0.00718117513213945"
+        ixy="1.89213931937555E-06"
+        ixz="-3.90978064541154E-05"
+        iyy="0.00808143324086865"
+        iyz="-0.000298758430067806"
+        izz="0.00164447992192259" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_knee_pitch"
+    type="continuous">
+    <origin
+      xyz="-4.3384E-05 0.0964 -0.25"
+      rpy="0 0 0" />
+    <parent
+      link="r_leg_pitch" />
+    <child
+      link="r_knee" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_foot_pitch">
+    <inertial>
+      <origin
+        xyz="-2.20949154781241E-07 0.0190002209491548 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00898868764931504" />
+      <inertia
+        ixx="8.64757693496478E-07"
+        ixy="-4.38815307853055E-16"
+        ixz="-3.49395618885692E-11"
+        iyy="8.64757693496477E-07"
+        iyz="-3.447500777464E-11"
+        izz="1.52124214524266E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_foot_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_foot_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_foot_pitch"
+    type="continuous">
+    <origin
+      xyz="4.3384E-05 -0.04675 -0.353"
+      rpy="0 0 0" />
+    <parent
+      link="r_knee" />
+    <child
+      link="r_foot_pitch" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_foot_roll">
+    <inertial>
+      <origin
+        xyz="-0.0276549818501959 9.29706928706753E-07 -0.0342264985364993"
+        rpy="0 0 0" />
+      <mass
+        value="0.123341112638817" />
+      <inertia
+        ixx="6.05531663999834E-05"
+        ixy="-7.10192428310914E-09"
+        ixz="1.16041279127443E-06"
+        iyy="0.000171194584536116"
+        iyz="-3.36890567202564E-10"
+        izz="0.000218939214415469" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_foot_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_foot_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_foot_roll"
+    type="continuous">
+    <origin
+      xyz="0.019 0.019 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_foot_pitch" />
+    <child
+      link="r_foot_roll" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r_l_bar_y">
+    <inertial>
+      <origin
+        xyz="-0.0129294994009648 0.0128630853654328 -1.59072754968292E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0127817045802381" />
+      <inertia
+        ixx="2.15923897826131E-06"
+        ixy="3.50819145287226E-07"
+        ixz="-8.88063747261787E-14"
+        iyy="7.6482563372837E-06"
+        iyz="-1.13605763281148E-14"
+        izz="6.78488271949178E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_l_bar_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_l_bar_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_l_bar_y"
+    type="continuous">
+    <origin
+      xyz="4.3384E-05 -0.0005 -0.113"
+      rpy="0 0 0" />
+    <parent
+      link="r_knee" />
+    <child
+      link="r_l_bar_y" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_l_tendon_y">
+    <inertial>
+      <origin
+        xyz="-9.49999188587236E-05 -0.00348245176303354 -0.130862807899797"
+        rpy="0 0 0" />
+      <mass
+        value="0.0265855485975515" />
+      <inertia
+        ixx="0.000111943514728618"
+        ixy="-1.51074332692611E-14"
+        ixz="-4.53659268039538E-14"
+        iyy="0.000111576415998951"
+        iyz="-5.33518749252404E-08"
+        izz="9.55856032401632E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_l_tendon_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_l_tendon_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_l_tendon_y"
+    type="continuous">
+    <origin
+      xyz="-0.056 0.01625 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_l_bar_y" />
+    <child
+      link="r_l_tendon_y" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_r_bar_y">
+    <inertial>
+      <origin
+        xyz="-0.0128762001528447 -0.0130442653026346 2.26097529230085E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.012759619292328" />
+      <inertia
+        ixx="2.15949216293024E-06"
+        ixy="-4.43842191565617E-07"
+        ixz="8.0878446410494E-09"
+        iyy="7.62569774369436E-06"
+        iyz="7.79356174418802E-10"
+        izz="6.76548222013046E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_r_bar_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_r_bar_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_r_bar_y"
+    type="continuous">
+    <origin
+      xyz="4.3384E-05 -0.0536 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_knee" />
+    <child
+      link="r_r_bar_y" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_r_tendon_y">
+    <inertial>
+      <origin
+        xyz="-9.50862732735092E-05 0.00348718924477323 -0.18933285378726"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364165502492022" />
+      <inertia
+        ixx="0.000353185761360811"
+        ixy="-2.08716409546033E-14"
+        ixz="-4.53660412639418E-14"
+        iyy="0.000352607688733292"
+        iyz="7.98861272575366E-08"
+        izz="1.28440648087613E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_r_tendon_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_r_tendon_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_r_tendon_y"
+    type="continuous">
+    <origin
+      xyz="-0.056 -0.01765 9.8332E-05"
+      rpy="0 0 0" />
+    <parent
+      link="r_r_bar_y" />
+    <child
+      link="r_r_tendon_y" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_arm_pitch">
+    <inertial>
+      <origin
+        xyz="0.00426180356202326 0.0756400746899267 1.88737914186277E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.102762122593925" />
+      <inertia
+        ixx="0.00017958634799516"
+        ixy="-1.00570820921815E-05"
+        ixz="-1.23851661988006E-08"
+        iyy="7.66338578060727E-05"
+        iyz="2.75506580236342E-20"
+        izz="0.000140801608282156" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_arm_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_arm_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_arm_pitch"
+    type="continuous">
+    <origin
+      xyz="0.003 0.113 0.3015"
+      rpy="0 0 0" />
+    <parent
+      link="torso" />
+    <child
+      link="l_arm_pitch" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_arm_roll">
+    <inertial>
+      <origin
+        xyz="-0.00610701950593298 1.15887887426058E-05 -0.0660998784651598"
+        rpy="0 0 0" />
+      <mass
+        value="0.486632014758663" />
+      <inertia
+        ixx="0.000563588080624589"
+        ixy="4.99738737043998E-08"
+        ixz="1.18492712297117E-05"
+        iyy="0.000453060509284239"
+        iyz="2.54109952461593E-07"
+        izz="0.000438272917711689" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_arm_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_arm_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_arm_roll"
+    type="continuous">
+    <origin
+      xyz="0.0048768 0.117 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_arm_pitch" />
+    <child
+      link="l_arm_roll" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="l_arm_yaw">
+    <inertial>
+      <origin
+        xyz="7.91005776691472E-05 0.0014182349242883 -0.0492322578769966"
+        rpy="0 0 0" />
+      <mass
+        value="0.168401983393923" />
+      <inertia
+        ixx="0.00012183745167461"
+        ixy="3.53911269888176E-08"
+        ixz="2.12182878234002E-07"
+        iyy="0.000199592739370853"
+        iyz="-9.50166106714498E-06"
+        izz="0.000111722048788737" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_arm_yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/l_arm_yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_arm_yaw"
+    type="continuous">
+    <origin
+      xyz="-0.00655 0 -0.19255"
+      rpy="0 0 0" />
+    <parent
+      link="l_arm_roll" />
+    <child
+      link="l_arm_yaw" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_arm_pitch">
+    <inertial>
+      <origin
+        xyz="0.0042618035620223 -0.0756400746899266 -2.91433543964104E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.102762122593925" />
+      <inertia
+        ixx="0.000179586347995161"
+        ixy="1.00570820921807E-05"
+        ixz="1.23851661985406E-08"
+        iyy="7.66338578060727E-05"
+        iyz="-1.08678821387657E-19"
+        izz="0.000140801608282156" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_arm_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_arm_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_arm_pitch"
+    type="continuous">
+    <origin
+      xyz="0.003 -0.113 0.3015"
+      rpy="0 0 0" />
+    <parent
+      link="torso" />
+    <child
+      link="r_arm_pitch" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_arm_roll">
+    <inertial>
+      <origin
+        xyz="-0.00610701950593297 1.15887887427168E-05 -0.0660998784651597"
+        rpy="0 0 0" />
+      <mass
+        value="0.486632014758663" />
+      <inertia
+        ixx="0.000563588080624589"
+        ixy="4.9973873703594E-08"
+        ixz="1.18492712297118E-05"
+        iyy="0.000453060509284239"
+        iyz="2.54109952461504E-07"
+        izz="0.000438272917711689" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_arm_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_arm_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_arm_roll"
+    type="continuous">
+    <origin
+      xyz="0.0048768 -0.117 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_arm_pitch" />
+    <child
+      link="r_arm_roll" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r_arm_yaw">
+    <inertial>
+      <origin
+        xyz="-7.91005776695393E-05 -0.0014182349242883 -0.0492322578769966"
+        rpy="0 0 0" />
+      <mass
+        value="0.168401983393922" />
+      <inertia
+        ixx="0.00012183745167461"
+        ixy="3.53911269885884E-08"
+        ixz="-2.12182878233979E-07"
+        iyy="0.000199592739370853"
+        iyz="9.50166106714506E-06"
+        izz="0.000111722048788737" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_arm_yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://HHH_Kuavo_V2_New/meshes/r_arm_yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_arm_yaw"
+    type="continuous">
+    <origin
+      xyz="-0.00655 0 -0.19255"
+      rpy="0 0 0" />
+    <parent
+      link="r_arm_roll" />
+    <child
+      link="r_arm_yaw" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

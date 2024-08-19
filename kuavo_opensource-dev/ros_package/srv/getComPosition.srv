@@ -1,0 +1,7 @@
+# getComPosition.srv
+# This service returns a vector3 representing the robot's center of mass (COM) value
+
+---
+
+# Response: vector3 representing the COM value
+geometry_msgs/Vector3 com_value

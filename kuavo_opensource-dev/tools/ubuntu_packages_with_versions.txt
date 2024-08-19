@@ -1,0 +1,4 @@
+libmodbus-dev:amd64=3.1.6-2
+libmodbus5:amd64=3.1.6-2
+libusb-1.0-0:amd64=2:1.0.23-2build1
+libusb-1.0-0-dev:amd64=2:1.0.23-2build1

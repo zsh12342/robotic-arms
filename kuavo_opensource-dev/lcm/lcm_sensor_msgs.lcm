@@ -1,0 +1,90 @@
+package lcm_sensor_msgs;
+
+struct JointState
+{
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  int32_t na;
+  int16_t id[na];
+  double q[na];
+  double v[na];
+  double vd[na];
+  double tau[na];
+}
+
+struct JointCommand
+{
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  int32_t na;
+  int16_t id[na];
+  double q[na];
+  double v[na];
+  double vd[na];
+  double tau[na];
+  double tau_max[na];
+  int8_t m;
+}
+
+struct Imu
+{
+  // Header
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  // data
+  double orientation[4];
+  double angular_velocity[3];
+  double angular_velocity_covariance[9];
+  double linear_acceleration[3];
+  double linear_acceleration_covariance[9];
+}
+
+struct MagneticField
+{
+  // Header
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  // data
+  double magnetic_field[3];
+  double magnetic_field_covariance[9];
+}
+
+struct NavSatFix
+{
+  // Header
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  // data
+  double latitude;
+  double longitude;
+  double altitude;
+  double position_covariance[9];
+  int8_t position_covariance_type;
+}
+
+struct TimeReference
+{
+  // Header
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  // data
+  int64_t time_sec;
+  int64_t time_nsec;
+  string source;
+}
+
+struct Vector3Stamped
+{
+  // Header
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  // data
+  double data[3];
+}

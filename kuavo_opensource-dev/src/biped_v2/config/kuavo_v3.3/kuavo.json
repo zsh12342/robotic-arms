@@ -1,0 +1,63 @@
+{
+    "contact_frames_name": ["l_foot_toe", "l_foot_heel", "r_foot_toe", "r_foot_heel"],
+    "model_path": "models/biped_gen3.3/urdf/biped_v3.urdf",
+    "model_with_arm_path": "models/biped_gen3.3/urdf/biped_v3_all_joint.urdf",
+    "Lleg_urdf":"models/biped_gen3.3/urdf/Lleg.urdf",
+    "Rleg_urdf":"models/biped_gen3.3/urdf/Rleg.urdf",
+    "end_frames_name": ["torso", "l_foot_sole", "r_foot_sole"],
+    "ankle_motor_offset_degree":[-15,-15,-15,-15],
+    "NUM_ARM_JOINT" : 6,
+    "NUM_JOINT" : 18,
+
+    "torsoP": 6.0,
+    "StepH": 0.06,
+    "com_z": 0.78,
+    "com_z_jump": 0.62,
+    "StepWith": 0.20,
+    "StepDuration":0.35,
+    "VelocityLimit":[1.2, 0.6, 6],
+    "cmd_vel_step":[0.1, 0.05, 5],
+    "walk_stablizer_count":800,
+    "walk_stablizer_threshold":2.5,
+    "torsoY": 0.0,
+    "V_takeoff" : 1.2,
+    "swing_arm": false,
+    "walk_swing_arm_degree":5.0,
+    "imu_invert":false,
+    "imu_in_torso": [0, 0, 0],
+    "isParallelArm":false,
+    "EndEffectorType": ["jodell", "jodell"],
+    "MOTORS_TYPE":[
+        "PA100", "PA81", "PA100", "PA100", "CK", "CK",
+        "PA100", "PA81", "PA100", "PA100", "CK", "CK",
+        "AK10_9", "CK", "CK",
+        "AK10_9", "CK", "CK"],
+    "min_joint_position_limits":[
+        -180, -180, -180, -180, -80, -80,
+        -180, -180, -180, -180, -80, -80,
+        -180, -180, -180,
+        -180, -180, -180],
+    "max_joint_position_limits":[
+        180, 180, 180, 180, 50, 50,
+        180, 180, 180, 180, 50, 50,
+        180, 180, 180,
+        180, 180, 180],
+    
+    "base_Q": [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 1e-3, 1e-3, 1e-3, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
+    "base_R": [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 5e2, 5e2, 5e2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
+    "com_Q": [1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3],
+    "com_R": [5e1, 5e1, 5e1, 2, 2, 2],
+    "left_foot_ankle_link_joint_frames": [
+        "foot", "l_link", "r_link", "l_l_arm_barxxx", "l_r_arm_barxxx",
+        "foot-x", "foot-y", "j-l_link", "j-r_link", "j-l_rocker_arm", "j-r_rocker_arm",
+        "a-l_rocker_arm", "a-r_rocker_arm",
+        "foot-l_link", "foot-r_link", "l_link-foot", "r_link-foot", "f-l_rocker_arm", "f-r_rocker_arm"
+    ],
+    "right_foot_ankle_link_joint_frames": [
+        "foot", "l_link", "r_link", "l_l_arm_barxxx", "l_r_arm_barxxx",
+        "foot-x", "foot-y", "j-l_link", "j-r_link", "j-l_rocker_arm", "j-r_rocker_arm",
+        "a-l_rocker_arm", "a-r_rocker_arm",
+        "foot-l_link", "foot-r_link", "l_link-foot", "r_link-foot", "f-l_rocker_arm", "f-r_rocker_arm"
+    ]
+    
+}

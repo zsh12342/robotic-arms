@@ -1,0 +1,41 @@
+package lcm_system_msgs;
+
+struct State
+{
+  int64_t sec;
+  int64_t nsec;
+  int64_t utime;
+  int16_t nq;
+  int16_t nv;
+  double q[nq];
+  double v[nv];
+}
+
+struct Command
+{
+  int64_t sec;
+  int64_t nsec;
+  int64_t utime;
+  int8_t mode;
+  int16_t nq;
+  int16_t nv;
+  int16_t na;
+  double q[nq];
+  double v[nv];
+  double f[na];
+}
+
+struct SystemX
+{
+  // Header
+  int64_t seq;
+  int64_t sec;
+  int64_t nsec;
+  // data
+  int32_t q_size;
+  double q[q_size];
+  int32_t v_size;
+  double v[v_size];
+  int32_t flags_size;
+  int8_t flags[flags_size];
+}

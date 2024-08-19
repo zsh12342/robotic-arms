@@ -1,0 +1,4 @@
+init_hand_pos 20 0 -30 20 0 -30
+walk_arm_pose 20 0 -35 20 0 -35
+hand_pose0 20 0 -35 20 0 -35
+hand_pose1 0 -170 10 10 10 10

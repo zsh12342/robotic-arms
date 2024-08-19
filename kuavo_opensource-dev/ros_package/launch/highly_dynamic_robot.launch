@@ -1,0 +1,11 @@
+<launch>
+  <!-- Node for highlyDynamicRobot -->
+  <node name="highly_dynamic_robot_node" pkg="dynamic_biped" type="highlyDynamicRobot_node" output="screen">
+    <!-- Add any required ROS parameters here -->
+    <!-- <param name="some_parameter" value="some_value"/> -->
+    <!-- If your node subscribes or publishes to specific topics, you can remap them here -->
+    <!-- <remap from="old_topic_name" to="new_topic_name"/> -->
+    <!-- Any additional arguments can be added here -->
+    <!-- <arg name="some_arg" default="some_value"/> -->
+  </node>
+</launch>

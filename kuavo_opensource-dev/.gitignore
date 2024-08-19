@@ -1,0 +1,10 @@
+lcm_types
+**/build
+**/.vscode
+.idea/*
+cmake-build-debug/*
+*.000.log
+*.000.csv
+**/cscope.files
+**/cscope.out
+
