@@ -1,0 +1,17 @@
+[config]
+openai_api_key = your-openAI-key
+network_proxy = http://192.168.31.233:7890
+
+recognition_app_id = 68f8a7b2 
+recognition_api_key = ZTYzMWQ4YWFmMjViNWY0YzM2MzBhNTll
+recognition_api_secret = d75d74be880b2f0139d3e7133450f263
+
+synthesis_app_id = 68f8a7b2
+synthesis_api_key = ZTYzMWQ4YWFmMjViNWY0YzM2MzBhNTll
+synthesis_api_secret = d75d74be880b2f0139d3e7133450f263
+
+audio_input_device_index = 18
+audio_output_device_index = 14
+energy_threashold = 1600
+
+zhipuai_api_key = your_zhipuai_api_key

@@ -1,0 +1,11 @@
+PyAudio
+websocket-client
+SpeechRecognition
+gpiozero
+pigpio
+pygame
+numpy
+opencv-python
+websocket
+zhipuai
+websockets

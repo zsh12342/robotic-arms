@@ -1,0 +1,13 @@
+abilities:
+  action_say_hello:
+    - "来挥手"
+    - "来挥个手"
+    - "来打招呼"
+  action_give_five:
+    - "来击掌"
+    - "来击个掌"
+    - "来进行击掌"
+  action_click_like:
+    - "来点赞"
+    - "来点个赞"
+    - "来进行点赞"
